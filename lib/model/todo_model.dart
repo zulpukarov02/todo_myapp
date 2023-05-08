@@ -3,11 +3,13 @@ import 'dart:convert';
 
 class ToDo {
   ToDo({
+    this.id,
     required this.title,
     this.description,
     required this.isCompleted,
     required this.author,
   });
+  String? id;
   final String title;
   final String? description;
   final bool isCompleted;
@@ -28,6 +30,7 @@ class ToDo {
       description: map['description'] as String?,
       isCompleted: map['isCompleted'] as bool,
       author: map['author'] as String,
+      id: '',
     );
   }
 
